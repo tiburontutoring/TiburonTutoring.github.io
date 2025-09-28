@@ -1,0 +1,321 @@
+/* styles.css */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  background: #f5f7fa;
+  /* reserve space for fixed header */
+  padding-top: 70px;
+}
+
+/* Centered container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(90deg, #005f73, #0a9396);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  height: 70px;
+}
+.logo {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+.nav-list a {
+  color: #e9d8a6;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.nav-list a:hover {
+  color: #fff;
+}
+
+/* Hero */
+#hero {
+  background: url('https://upload.wikimedia.org/wikipedia/commons/8/87/Tiburon%2C_California_USA_-_panoramio.jpg') center/cover no-repeat;
+  position: relative;
+  height: calc(100vh - 70px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+}
+.hero-content {
+  position: relative;
+  text-align: center;
+  color: #fff;
+}
+.hero-content h1 {
+  font-size: 3.25rem;
+  margin-bottom: 0rem;
+}
+.hero-content p {
+  font-size: 1.375rem;
+  margin-bottom: 1.5rem;
+}
+.btn-primary {
+  background: #94d2bd;
+  color: #005f73;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: background 0.3s, transform 0.3s;
+}
+.btn-primary:hover {
+  background: #ee9b00;
+  transform: translateY(-3px);
+}
+
+/* SVG Dividers */
+.divider-top {
+  position: relative;
+  top: -2px;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+.divider-top svg {
+  width: 100%;
+  height: 80px;
+  display: block;
+}
+.divider-top .shape-fill {
+  fill: #f5f7fa;
+}
+.divider-top.flipped {
+  transform: rotate(180deg);
+}
+
+/* About */
+#about {
+  background: #f5f7fa;
+  padding: 1.5rem 0;  /* reduced from 6rem to 4rem */
+}
+
+.about-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;      /* keeps items vertically aligned */
+  justify-content: center;  /* ⬅️ add this to center them horizontally */
+  gap: 2rem;
+}
+
+.about-image {
+  text-align: center;
+}
+
+.about-image img {
+  display: inline-block; /* or block */
+  margin: 0 auto;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+.about-text h2 {
+  font-size: 3rem;      
+  color: #005f73;
+  margin-bottom: 1rem;
+  text-align: center;    
+}
+
+.about-text p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+/* Services */
+#services {
+  background: #edf6f9;
+  padding: 6rem 0;
+}
+#services h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 2rem;
+}
+.service-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+.service-card:hover {
+  transform: translateY(-8px);
+}
+.service-card i {
+  font-size: 3rem;
+  color: #005f73;
+  margin-bottom: 1rem;
+}
+.service-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+.service-card p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Our Team */
+#team {
+  position: relative;
+  background: url('A_photograph_captures_a_study_scene_on_a_wooden_de.png') center/cover no-repeat;
+  background-color: #333;
+  /* top padding 4rem (moved up), bottom 6rem: */
+  padding: 4rem 0 6rem;
+  min-height: 400px;
+  color: #fff;
+}
+
+
+/* optional—dark overlay to boost contrast */
+#team::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+#team .container {
+  position: relative;
+  z-index: 1;
+}
+
+#team h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+.team-member {
+  background: #fff;
+  color: #333;           /* ← add this */
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.team-member:hover {
+  transform: translateY(-8px);
+}
+.team-member img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+.team-member h3 {
+  font-size: 2rem;
+  color: #005f73;
+  margin-bottom: 0.5rem;
+}
+.team-member p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+
+/* Contact */
+#contact {
+  background: #cfeefa;
+  padding: 6rem 0;
+  text-align: center;
+}
+.contact-list {
+  list-style: none;
+  display: inline-block;
+  padding: 0;
+}
+.contact-list li {
+  margin: 1rem 0;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+.contact-list i {
+  color: #005f73;
+}
+
+/* Footer */
+footer {
+  background: #005f73;
+  color: #e9d8a6;
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 0.9rem;
+}
+.footer-content a {
+  color: #94d2bd;
+  transition: color 0.3s;
+}
+.footer-content a:hover {
+  color: #fff;
+}
+
+/* Mobile Breakpoints */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  .nav-list {
+    gap: 1rem;
+  }
+  .about-wrapper {
+    flex-direction: column;
+  }
+}
