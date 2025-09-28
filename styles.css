@@ -1,4 +1,3 @@
-/* styles.css */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -123,26 +122,22 @@ header {
 /* About */
 #about {
   background: #f5f7fa;
-  padding: 1.5rem 0;  /* reduced from 6rem to 4rem */
+  padding: 1.5rem 0;
 }
-
 .about-wrapper {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;      /* keeps items vertically aligned */
-  justify-content: center;  /* ⬅️ add this to center them horizontally */
+  align-items: center;
+  justify-content: center;
   gap: 2rem;
 }
-
 .about-image {
   text-align: center;
 }
-
 .about-image img {
-  display: inline-block; /* or block */
+  display: inline-block;
   margin: 0 auto;
 }
-
 .about-image img {
   width: 100%;
   max-width: 400px;
@@ -150,12 +145,11 @@ header {
   box-shadow: 0 6px 20px rgba(0,0,0,0.1);
 }
 .about-text h2 {
-  font-size: 3rem;      
+  font-size: 3rem;
   color: #005f73;
   margin-bottom: 1rem;
-  text-align: center;    
+  text-align: center;
 }
-
 .about-text p {
   font-size: 1.125rem;
   line-height: 1.6;
@@ -206,14 +200,10 @@ header {
   position: relative;
   background: url('A_photograph_captures_a_study_scene_on_a_wooden_de.png') center/cover no-repeat;
   background-color: #333;
-  /* top padding 4rem (moved up), bottom 6rem: */
   padding: 4rem 0 6rem;
   min-height: 400px;
   color: #fff;
 }
-
-
-/* optional—dark overlay to boost contrast */
 #team::before {
   content: '';
   position: absolute;
@@ -225,7 +215,6 @@ header {
   position: relative;
   z-index: 1;
 }
-
 #team h2 {
   font-size: 2.5rem;
   text-align: center;
@@ -239,14 +228,13 @@ header {
 }
 .team-member {
   background: #fff;
-  color: #333;           /* ← add this */
+  color: #333;
   border-radius: 16px;
   padding: 2rem;
   text-align: center;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s;
 }
-
 .team-member:hover {
   transform: translateY(-8px);
 }
@@ -266,7 +254,6 @@ header {
   font-size: 1rem;
   line-height: 1.5;
 }
-
 
 /* Contact */
 #contact {
@@ -310,12 +297,39 @@ footer {
 /* Mobile Breakpoints */
 @media (max-width: 768px) {
   .hero-content h1 {
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .logo {
+    font-size: 1.25rem;
+  }
+
   .nav-list {
-    gap: 1rem;
+    gap: 0.75rem;
+    font-size: 0.9rem;
   }
+
+  header {
+    padding: 0.75rem;
+    height: 60px;
+  }
+
+  body {
+    padding-top: 60px;
+  }
+
   .about-wrapper {
     flex-direction: column;
+  }
+
+  .about-text h2,
+  #services h2,
+  #team h2,
+  #contact h2 {
+    font-size: 2rem;
   }
 }
