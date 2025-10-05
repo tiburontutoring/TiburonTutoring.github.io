@@ -42,7 +42,7 @@ header {
   color: #fff;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 1.5rem;
 }
 .nav-list {
   list-style: none;
@@ -296,25 +296,6 @@ footer {
 
 /* Mobile Breakpoints */
 @media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0.75rem 1rem;
-    height: auto;
-  }
-
-  .logo {
-    font-size: 1.25rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .nav-list {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.25rem;
-    font-size: 0.95rem;
-  }
-
   .hero-content h1 {
     font-size: 1.75rem;
   }
@@ -323,8 +304,22 @@ footer {
     font-size: 1rem;
   }
 
+  .logo {
+    font-size: 1.25rem;
+  }
+
+  .nav-list {
+    gap: 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  header {
+    padding: 0.75rem;
+    height: 60px;
+  }
+
   body {
-    padding-top: 110px; /* Adjust if needed based on new header height */
+    padding-top: 60px;
   }
 
   .about-wrapper {
@@ -337,4 +332,22 @@ footer {
   #contact h2 {
     font-size: 2rem;
   }
+/* Header logo text + image */
+.logo-text {
+  color: #fff;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.logo-img {
+  height: 48px;         /* scales proportionally */
+  width: auto;
+  display: block;
+}
+
+/* Slightly smaller logo on mobile */
+@media (max-width: 768px) {
+  .logo-img { height: 36px; }
+}
+
 }
