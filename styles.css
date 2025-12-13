@@ -277,8 +277,11 @@ header .logo {
 }
 .contact-list {
   list-style: none;
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centers email horizontally */
   padding: 0;
+  margin: 0;
 }
 .contact-list li {
   margin: 1rem 0;
@@ -291,6 +294,25 @@ header .logo {
 .contact-list i {
   color: #005f73;
 }
+.form-button {
+  display: inline-block;      /* shrink to fit text, not full width */
+  margin-top: 0.75rem;        /* space above the button */
+  padding: 0.6rem 1.4rem;     /* bubble size */
+  border-radius: 999px;
+  background-color: #005f73;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+
+  /* 👇 tiny nudge to the right */
+  position: relative;
+  left: 4px;                  /* try 4–6px; adjust if you want more/less */
+}
+
+.form-button:hover {
+  background-color: #0a9396;
+}
+
 
 /* Footer */
 footer {
@@ -346,6 +368,7 @@ footer {
   #contact h2 {
     font-size: 2rem;
   }
+
 /* Header logo text + image */
 .logo-text {
   color: #fff;
