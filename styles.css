@@ -290,6 +290,10 @@ header .logo {
   align-items: center;
   justify-content: center;
   gap: 0.75rem;
+
+  /* 👇 small nudge to the left */
+  position: relative;
+  left: -4.5px;  /* try -4px to -8px and adjust until it looks right */
 }
 .contact-list i {
   color: #005f73;
@@ -304,9 +308,7 @@ header .logo {
   font-weight: 600;
   text-decoration: none;
 
-  /* 👇 tiny nudge to the right */
-  position: relative;
-  left: 4px;                  /* try 4–6px; adjust if you want more/less */
+
 }
 
 .form-button:hover {
